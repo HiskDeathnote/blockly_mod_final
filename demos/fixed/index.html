@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Blockly Demo: Fixed Blockly</title>
+  <script src="../../blockly_uncompressed.js"></script>
+  <script src="../../blocks_compressed.js"></script>
+  <script src="../../msg/js/en.js"></script>
+  <script src="./script/move_mod.js"></script>  
+  <script src="./script/turn_mod.js"></script>
+  <script src="./script/repeat_mod.js"></script>
+  <script src="./script/path_mod.js"></script>
+  <script src="./script/if_mod.js"></script>
+  <script src="../../msg/js/en.js"></script>
+  <style>
+    body {
+      background-color: #fff;
+      font-family: sans-serif;
+    }
+    h1 {
+      font-weight: normal;
+      font-size: 140%;
+    }
+  </style>
+</head>
+<body>
+  <h1><a href="https://developers.google.com/blockly/">Blockly</a> &gt;
+    <a href="../index.html">Demos</a> &gt; Fixed Blockly</h1>
+
+  <p>This is a simple demo of injecting Blockly into a fixed-sized 'div' element.</p>
+
+  <div id="blocklyDiv" style="height: 680px; width: 800px;"></div>
+
+  <xml id="toolbox" style="display: none">
+      <!-- Created a custom blocks inside ./script folder -->
+
+      <!-- Move Block -->
+      <block type="move_mod"></block>
+
+      <!-- Turn Block -->
+      <block type="turn_mod"></block>
+
+      <!-- Repeat Block -->
+      <block type="repeat_mod"></block>
+
+      <!-- Path Block -->
+      <block type="path_mod"></block>
+
+      <!-- If Block -->
+      <block type="if_mod"></block>
+
+  </xml>
+
+  <script>
+    var workspace = Blockly.inject('blocklyDiv',
+        {media: '../../media/',
+         toolbox: document.getElementById('toolbox')});
+  </script>
+
+</body>
+</html>
